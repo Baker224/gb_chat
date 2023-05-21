@@ -1,10 +1,14 @@
 import ping3
+import chardet
 
 
 def ping_and_decode(host):
     result = ping3.ping(host, timeout=2, unit='ms')
     if result is not None:
-        return str(result)
+        result_bytes = str(result).encode()
+        encoding = chardet.detect(result_bytes)['encoding']
+        decoded_result = result_bytes.decode(encoding)
+        return decoded_result
     else:
         return "Ping failed"
 

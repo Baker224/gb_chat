@@ -1,9 +1,10 @@
 import chardet
 
-with open('test_file.txt', 'w', encoding='utf-8') as file:
-    file.write('сетевое программирование\n')
-    file.write('сокет\n')
-    file.write('декоратор\n')
+
+with open('test_file.txt', 'wb') as file:
+    content = 'сетевое программирование\nсокет\nдекоратор\n'
+    file.write(content.encode())
+
 
 with open('test_file.txt', 'rb') as file:
     content = file.read()
@@ -12,7 +13,8 @@ with open('test_file.txt', 'rb') as file:
 
 print(f"Кодировка файла по умолчанию: {encoding}")
 
-with open('test_file.txt', 'r', encoding=encoding) as file:
+
+with open('test_file.txt', 'r', encoding='utf-8') as file:
     content = file.read()
 
 print(content)
