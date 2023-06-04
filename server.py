@@ -1,6 +1,7 @@
 import socket
 import json
 import sys
+from gb_chat.log.server_log_config import logger
 
 
 def create_response(message):
@@ -27,7 +28,7 @@ def receive_message(sock):
 
 def parse_message(message):
     if 'action' in message and message['action'] == 'presence':
-        print('Received presence message from user:', message['user']['account_name'])
+        logger.info('Received presence message from user: %s', message['user']['account_name'])
         return 'Presence message received'
     else:
         return 'Invalid message'
@@ -41,12 +42,12 @@ def main():
     try:
         sock.bind((server_address, server_port))
         sock.listen(1)
-        print('Server started')
+        logger.info('Server started')
 
         while True:
-            print('Waiting for a connection...')
+            logger.info('Waiting for a connection...')
             client_sock, client_address = sock.accept()
-            print('Accepted connection from', client_address)
+            logger.info('Accepted connection from %s', client_address)
 
             message = receive_message(client_sock)
             result = parse_message(message)
@@ -55,10 +56,10 @@ def main():
             send_response(client_sock, response)
 
             client_sock.close()
-            print('Connection closed')
+            logger.info('Connection closed')
 
     except OSError as e:
-        print('Error:', e)
+        logger.error('Error: %s', e)
 
     finally:
         sock.close()

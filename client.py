@@ -1,6 +1,7 @@
 import sys
 import json
 import socket
+from gb_chat.log.client_log_config import logger
 
 def create_presence_message():
     message = {
@@ -23,7 +24,7 @@ def parse_response(response):
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: client.py <addr> [<port>]")
+        logger.error("Usage: client.py <addr> [<port>]")
         return
 
     server_address = sys.argv[1]
@@ -37,7 +38,7 @@ def main():
 
     response = receive_response(sock)
     parsed_response = parse_response(response)
-    print("Response:", parsed_response)
+    logger.info("Response: %s", parsed_response)
 
     sock.close()
 
