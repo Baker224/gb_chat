@@ -1,7 +1,8 @@
 import sys
 import json
 import socket
-from gb_chat.log.client_log_config import logger
+from gb_chat.log.client_log_config import logger, log
+
 
 def create_presence_message():
     message = {
@@ -12,16 +13,21 @@ def create_presence_message():
     }
     return json.dumps(message)
 
+
 def send_message(sock, message):
     sock.sendall(message.encode())
+
 
 def receive_response(sock):
     response = sock.recv(1024)
     return response.decode()
 
+
 def parse_response(response):
     return json.loads(response)
 
+
+@log
 def main():
     if len(sys.argv) < 2:
         logger.error("Usage: client.py <addr> [<port>]")
@@ -41,6 +47,7 @@ def main():
     logger.info("Response: %s", parsed_response)
 
     sock.close()
+
 
 if __name__ == '__main__':
     main()

@@ -1,66 +1,35 @@
-2023-06-04 22:29:15,414 INFO server Server started
-2023-06-04 22:29:15,415 INFO server Waiting for a connection...
-2023-06-04 22:29:15,453 INFO server Accepted connection from ('127.0.0.1', 50590)
-2023-06-04 22:29:15,454 INFO server Received presence message from user: user1
-2023-06-04 22:29:15,454 INFO server Connection closed
-2023-06-04 22:29:15,454 INFO server Waiting for a connection...
-2023-06-04 22:29:15,462 INFO server Accepted connection from ('127.0.0.1', 50591)
-2023-06-04 22:29:15,462 INFO server Received presence message from user: user1
-2023-06-04 22:29:15,462 INFO server Connection closed
-2023-06-04 22:29:15,463 INFO server Waiting for a connection...
-2023-06-04 22:29:15,467 INFO server Accepted connection from ('127.0.0.1', 50592)
-2023-06-04 22:29:15,467 INFO server Received presence message from user: user1
-2023-06-04 22:29:15,468 INFO server Connection closed
-2023-06-04 22:29:15,468 INFO server Waiting for a connection...
-2023-06-04 22:29:15,471 INFO server Accepted connection from ('127.0.0.1', 50593)
-2023-06-04 22:29:15,472 INFO server Received presence message from user: user1
-2023-06-04 22:29:15,472 INFO server Connection closed
-2023-06-04 22:29:15,472 INFO server Waiting for a connection...
-2023-06-04 22:29:15,479 INFO server Accepted connection from ('127.0.0.1', 50594)
-2023-06-04 22:29:15,479 INFO server Received presence message from user: user1
-2023-06-04 22:29:15,479 INFO server Connection closed
-2023-06-04 22:29:15,480 INFO server Waiting for a connection...
-2023-06-04 22:29:23,126 INFO server Accepted connection from ('127.0.0.1', 50596)
-2023-06-04 22:29:23,126 INFO server Received presence message from user: user1
-2023-06-04 22:29:23,127 INFO server Connection closed
-2023-06-04 22:29:23,127 INFO server Waiting for a connection...
-2023-06-04 22:29:23,144 INFO server Accepted connection from ('127.0.0.1', 50597)
-2023-06-04 22:29:23,144 INFO server Received presence message from user: user1
-2023-06-04 22:29:23,144 INFO server Connection closed
-2023-06-04 22:29:23,144 INFO server Waiting for a connection...
-2023-06-04 22:29:23,153 INFO server Accepted connection from ('127.0.0.1', 50598)
-2023-06-04 22:29:23,153 INFO server Received presence message from user: user1
-2023-06-04 22:29:23,154 INFO server Connection closed
-2023-06-04 22:29:23,154 INFO server Waiting for a connection...
-2023-06-04 22:29:23,162 INFO server Accepted connection from ('127.0.0.1', 50599)
-2023-06-04 22:29:23,162 INFO server Received presence message from user: user1
-2023-06-04 22:29:23,162 INFO server Connection closed
-2023-06-04 22:29:23,162 INFO server Waiting for a connection...
-2023-06-04 22:29:23,167 INFO server Accepted connection from ('127.0.0.1', 50600)
-2023-06-04 22:29:23,167 INFO server Received presence message from user: user1
-2023-06-04 22:29:23,167 INFO server Connection closed
-2023-06-04 22:29:23,168 INFO server Waiting for a connection...
-2023-06-04 22:29:44,146 INFO server Server started
-2023-06-04 22:29:44,147 INFO server Waiting for a connection...
-2023-06-04 22:31:02,406 INFO server Server started
-2023-06-04 22:31:02,407 INFO server Waiting for a connection...
-2023-06-04 22:31:02,435 INFO server Accepted connection from ('127.0.0.1', 50608)
-2023-06-04 22:31:02,435 INFO server Received presence message from user: user1
-2023-06-04 22:31:02,435 INFO server Connection closed
-2023-06-04 22:31:02,436 INFO server Waiting for a connection...
-2023-06-04 22:31:02,447 INFO server Accepted connection from ('127.0.0.1', 50609)
-2023-06-04 22:31:02,448 INFO server Received presence message from user: user1
-2023-06-04 22:31:02,448 INFO server Connection closed
-2023-06-04 22:31:02,448 INFO server Waiting for a connection...
-2023-06-04 22:31:02,460 INFO server Accepted connection from ('127.0.0.1', 50610)
-2023-06-04 22:31:02,460 INFO server Received presence message from user: user1
-2023-06-04 22:31:02,460 INFO server Connection closed
-2023-06-04 22:31:02,460 INFO server Waiting for a connection...
-2023-06-04 22:31:02,465 INFO server Accepted connection from ('127.0.0.1', 50611)
-2023-06-04 22:31:02,465 INFO server Received presence message from user: user1
-2023-06-04 22:31:02,465 INFO server Connection closed
-2023-06-04 22:31:02,465 INFO server Waiting for a connection...
-2023-06-04 22:31:02,474 INFO server Accepted connection from ('127.0.0.1', 50612)
-2023-06-04 22:31:02,474 INFO server Received presence message from user: user1
-2023-06-04 22:31:02,474 INFO server Connection closed
-2023-06-04 22:31:02,474 INFO server Waiting for a connection...
+2023-06-07 23:29:31,979 INFO server.py Server started
+2023-06-07 23:29:31,979 INFO server.py Waiting for a connection...
+2023-06-07 23:29:31,996 INFO server.py Accepted connection from ('127.0.0.1', 51016)
+2023-06-07 23:29:31,996 INFO server.py Received presence message from user: user1
+2023-06-07 23:29:54,451 INFO server.py Server started
+2023-06-07 23:29:54,452 INFO server.py Waiting for a connection...
+2023-06-07 23:29:54,468 INFO server.py Accepted connection from ('127.0.0.1', 51021)
+2023-06-07 23:29:54,468 INFO server.py Received presence message from user: user1
+2023-06-07 23:31:36,359 INFO server.py Server started
+2023-06-07 23:31:36,360 INFO server.py Waiting for a connection...
+2023-06-07 23:31:36,364 INFO server.py Accepted connection from ('127.0.0.1', 51037)
+2023-06-07 23:31:36,364 INFO server.py Received presence message from user: user1
+2023-06-07 23:31:36,364 INFO server_log_config.py Function create_response() called from function E:\Geekbrains\repo\gb_chat\gb_chat\server
+2023-06-07 23:31:36,364 INFO server.py Connection closed
+2023-06-07 23:31:36,365 INFO server.py Waiting for a connection...
+2023-06-07 23:31:36,365 INFO server.py Accepted connection from ('127.0.0.1', 51038)
+2023-06-07 23:31:36,365 INFO server.py Received presence message from user: user1
+2023-06-07 23:31:36,365 INFO server_log_config.py Function create_response() called from function E:\Geekbrains\repo\gb_chat\gb_chat\server
+2023-06-07 23:31:36,365 INFO server.py Connection closed
+2023-06-07 23:31:36,366 INFO server.py Waiting for a connection...
+2023-06-07 23:31:36,366 INFO server.py Accepted connection from ('127.0.0.1', 51039)
+2023-06-07 23:31:36,366 INFO server.py Received presence message from user: user1
+2023-06-07 23:31:36,366 INFO server_log_config.py Function create_response() called from function E:\Geekbrains\repo\gb_chat\gb_chat\server
+2023-06-07 23:31:36,366 INFO server.py Connection closed
+2023-06-07 23:31:36,366 INFO server.py Waiting for a connection...
+2023-06-07 23:31:36,370 INFO server.py Accepted connection from ('127.0.0.1', 51040)
+2023-06-07 23:31:36,370 INFO server.py Received presence message from user: user1
+2023-06-07 23:31:36,370 INFO server_log_config.py Function create_response() called from function E:\Geekbrains\repo\gb_chat\gb_chat\server
+2023-06-07 23:31:36,370 INFO server.py Connection closed
+2023-06-07 23:31:36,371 INFO server.py Waiting for a connection...
+2023-06-07 23:31:36,372 INFO server.py Accepted connection from ('127.0.0.1', 51041)
+2023-06-07 23:31:36,373 INFO server.py Received presence message from user: user1
+2023-06-07 23:31:36,373 INFO server_log_config.py Function create_response() called from function E:\Geekbrains\repo\gb_chat\gb_chat\server
+2023-06-07 23:31:36,373 INFO server.py Connection closed
+2023-06-07 23:31:36,373 INFO server.py Waiting for a connection...

@@ -1,0 +1,66 @@
+2023-06-04 22:29:15,414 INFO server Server started
+2023-06-04 22:29:15,415 INFO server Waiting for a connection...
+2023-06-04 22:29:15,453 INFO server Accepted connection from ('127.0.0.1', 50590)
+2023-06-04 22:29:15,454 INFO server Received presence message from user: user1
+2023-06-04 22:29:15,454 INFO server Connection closed
+2023-06-04 22:29:15,454 INFO server Waiting for a connection...
+2023-06-04 22:29:15,462 INFO server Accepted connection from ('127.0.0.1', 50591)
+2023-06-04 22:29:15,462 INFO server Received presence message from user: user1
+2023-06-04 22:29:15,462 INFO server Connection closed
+2023-06-04 22:29:15,463 INFO server Waiting for a connection...
+2023-06-04 22:29:15,467 INFO server Accepted connection from ('127.0.0.1', 50592)
+2023-06-04 22:29:15,467 INFO server Received presence message from user: user1
+2023-06-04 22:29:15,468 INFO server Connection closed
+2023-06-04 22:29:15,468 INFO server Waiting for a connection...
+2023-06-04 22:29:15,471 INFO server Accepted connection from ('127.0.0.1', 50593)
+2023-06-04 22:29:15,472 INFO server Received presence message from user: user1
+2023-06-04 22:29:15,472 INFO server Connection closed
+2023-06-04 22:29:15,472 INFO server Waiting for a connection...
+2023-06-04 22:29:15,479 INFO server Accepted connection from ('127.0.0.1', 50594)
+2023-06-04 22:29:15,479 INFO server Received presence message from user: user1
+2023-06-04 22:29:15,479 INFO server Connection closed
+2023-06-04 22:29:15,480 INFO server Waiting for a connection...
+2023-06-04 22:29:23,126 INFO server Accepted connection from ('127.0.0.1', 50596)
+2023-06-04 22:29:23,126 INFO server Received presence message from user: user1
+2023-06-04 22:29:23,127 INFO server Connection closed
+2023-06-04 22:29:23,127 INFO server Waiting for a connection...
+2023-06-04 22:29:23,144 INFO server Accepted connection from ('127.0.0.1', 50597)
+2023-06-04 22:29:23,144 INFO server Received presence message from user: user1
+2023-06-04 22:29:23,144 INFO server Connection closed
+2023-06-04 22:29:23,144 INFO server Waiting for a connection...
+2023-06-04 22:29:23,153 INFO server Accepted connection from ('127.0.0.1', 50598)
+2023-06-04 22:29:23,153 INFO server Received presence message from user: user1
+2023-06-04 22:29:23,154 INFO server Connection closed
+2023-06-04 22:29:23,154 INFO server Waiting for a connection...
+2023-06-04 22:29:23,162 INFO server Accepted connection from ('127.0.0.1', 50599)
+2023-06-04 22:29:23,162 INFO server Received presence message from user: user1
+2023-06-04 22:29:23,162 INFO server Connection closed
+2023-06-04 22:29:23,162 INFO server Waiting for a connection...
+2023-06-04 22:29:23,167 INFO server Accepted connection from ('127.0.0.1', 50600)
+2023-06-04 22:29:23,167 INFO server Received presence message from user: user1
+2023-06-04 22:29:23,167 INFO server Connection closed
+2023-06-04 22:29:23,168 INFO server Waiting for a connection...
+2023-06-04 22:29:44,146 INFO server Server started
+2023-06-04 22:29:44,147 INFO server Waiting for a connection...
+2023-06-04 22:31:02,406 INFO server Server started
+2023-06-04 22:31:02,407 INFO server Waiting for a connection...
+2023-06-04 22:31:02,435 INFO server Accepted connection from ('127.0.0.1', 50608)
+2023-06-04 22:31:02,435 INFO server Received presence message from user: user1
+2023-06-04 22:31:02,435 INFO server Connection closed
+2023-06-04 22:31:02,436 INFO server Waiting for a connection...
+2023-06-04 22:31:02,447 INFO server Accepted connection from ('127.0.0.1', 50609)
+2023-06-04 22:31:02,448 INFO server Received presence message from user: user1
+2023-06-04 22:31:02,448 INFO server Connection closed
+2023-06-04 22:31:02,448 INFO server Waiting for a connection...
+2023-06-04 22:31:02,460 INFO server Accepted connection from ('127.0.0.1', 50610)
+2023-06-04 22:31:02,460 INFO server Received presence message from user: user1
+2023-06-04 22:31:02,460 INFO server Connection closed
+2023-06-04 22:31:02,460 INFO server Waiting for a connection...
+2023-06-04 22:31:02,465 INFO server Accepted connection from ('127.0.0.1', 50611)
+2023-06-04 22:31:02,465 INFO server Received presence message from user: user1
+2023-06-04 22:31:02,465 INFO server Connection closed
+2023-06-04 22:31:02,465 INFO server Waiting for a connection...
+2023-06-04 22:31:02,474 INFO server Accepted connection from ('127.0.0.1', 50612)
+2023-06-04 22:31:02,474 INFO server Received presence message from user: user1
+2023-06-04 22:31:02,474 INFO server Connection closed
+2023-06-04 22:31:02,474 INFO server Waiting for a connection...

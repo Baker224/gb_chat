@@ -1,9 +1,10 @@
 import socket
 import json
 import sys
-from gb_chat.log.server_log_config import logger
+from gb_chat.log.server_log_config import logger, log
 
 
+@log
 def create_response(message):
     response = {
         'response': 200,
