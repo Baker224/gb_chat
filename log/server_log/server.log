@@ -1,0 +1,35 @@
+2023-06-07 23:29:31,979 INFO server.py Server started
+2023-06-07 23:29:31,979 INFO server.py Waiting for a connection...
+2023-06-07 23:29:31,996 INFO server.py Accepted connection from ('127.0.0.1', 51016)
+2023-06-07 23:29:31,996 INFO server.py Received presence message from user: user1
+2023-06-07 23:29:54,451 INFO server.py Server started
+2023-06-07 23:29:54,452 INFO server.py Waiting for a connection...
+2023-06-07 23:29:54,468 INFO server.py Accepted connection from ('127.0.0.1', 51021)
+2023-06-07 23:29:54,468 INFO server.py Received presence message from user: user1
+2023-06-07 23:31:36,359 INFO server.py Server started
+2023-06-07 23:31:36,360 INFO server.py Waiting for a connection...
+2023-06-07 23:31:36,364 INFO server.py Accepted connection from ('127.0.0.1', 51037)
+2023-06-07 23:31:36,364 INFO server.py Received presence message from user: user1
+2023-06-07 23:31:36,364 INFO server_log_config.py Function create_response() called from function E:\Geekbrains\repo\gb_chat\gb_chat\server
+2023-06-07 23:31:36,364 INFO server.py Connection closed
+2023-06-07 23:31:36,365 INFO server.py Waiting for a connection...
+2023-06-07 23:31:36,365 INFO server.py Accepted connection from ('127.0.0.1', 51038)
+2023-06-07 23:31:36,365 INFO server.py Received presence message from user: user1
+2023-06-07 23:31:36,365 INFO server_log_config.py Function create_response() called from function E:\Geekbrains\repo\gb_chat\gb_chat\server
+2023-06-07 23:31:36,365 INFO server.py Connection closed
+2023-06-07 23:31:36,366 INFO server.py Waiting for a connection...
+2023-06-07 23:31:36,366 INFO server.py Accepted connection from ('127.0.0.1', 51039)
+2023-06-07 23:31:36,366 INFO server.py Received presence message from user: user1
+2023-06-07 23:31:36,366 INFO server_log_config.py Function create_response() called from function E:\Geekbrains\repo\gb_chat\gb_chat\server
+2023-06-07 23:31:36,366 INFO server.py Connection closed
+2023-06-07 23:31:36,366 INFO server.py Waiting for a connection...
+2023-06-07 23:31:36,370 INFO server.py Accepted connection from ('127.0.0.1', 51040)
+2023-06-07 23:31:36,370 INFO server.py Received presence message from user: user1
+2023-06-07 23:31:36,370 INFO server_log_config.py Function create_response() called from function E:\Geekbrains\repo\gb_chat\gb_chat\server
+2023-06-07 23:31:36,370 INFO server.py Connection closed
+2023-06-07 23:31:36,371 INFO server.py Waiting for a connection...
+2023-06-07 23:31:36,372 INFO server.py Accepted connection from ('127.0.0.1', 51041)
+2023-06-07 23:31:36,373 INFO server.py Received presence message from user: user1
+2023-06-07 23:31:36,373 INFO server_log_config.py Function create_response() called from function E:\Geekbrains\repo\gb_chat\gb_chat\server
+2023-06-07 23:31:36,373 INFO server.py Connection closed
+2023-06-07 23:31:36,373 INFO server.py Waiting for a connection...

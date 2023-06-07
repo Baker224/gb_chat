@@ -1,0 +1,15 @@
+2023-06-07 23:29:54,467 INFO client_log_config Function main() called from function E:\Geekbrains\repo\gb_chat\gb_chat\client
+2023-06-07 23:29:54,467 INFO client_log_config Function main() called from function E:\Geekbrains\repo\gb_chat\gb_chat\client
+2023-06-07 23:29:54,468 INFO client_log_config Function main() called from function E:\Geekbrains\repo\gb_chat\gb_chat\client
+2023-06-07 23:29:54,473 INFO client_log_config Function main() called from function E:\Geekbrains\repo\gb_chat\gb_chat\client
+2023-06-07 23:29:54,475 INFO client_log_config Function main() called from function E:\Geekbrains\repo\gb_chat\gb_chat\client
+2023-06-07 23:31:36,363 INFO client_log_config Function main() called from function E:\Geekbrains\repo\gb_chat\gb_chat\client
+2023-06-07 23:31:36,363 INFO client_log_config Function main() called from function E:\Geekbrains\repo\gb_chat\gb_chat\client
+2023-06-07 23:31:36,364 INFO client Response: {'response': 200, 'message': 'OK', 'data': 'Presence message received'}
+2023-06-07 23:31:36,365 INFO client_log_config Function main() called from function E:\Geekbrains\repo\gb_chat\gb_chat\client
+2023-06-07 23:31:36,365 INFO client Response: {'response': 200, 'message': 'OK', 'data': 'Presence message received'}
+2023-06-07 23:31:36,366 INFO client Response: {'response': 200, 'message': 'OK', 'data': 'Presence message received'}
+2023-06-07 23:31:36,369 INFO client_log_config Function main() called from function E:\Geekbrains\repo\gb_chat\gb_chat\client
+2023-06-07 23:31:36,370 INFO client Response: {'response': 200, 'message': 'OK', 'data': 'Presence message received'}
+2023-06-07 23:31:36,372 INFO client_log_config Function main() called from function E:\Geekbrains\repo\gb_chat\gb_chat\client
+2023-06-07 23:31:36,373 INFO client Response: {'response': 200, 'message': 'OK', 'data': 'Presence message received'}
