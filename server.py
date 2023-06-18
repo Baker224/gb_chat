@@ -1,68 +1,81 @@
 import socket
-import json
 import sys
-from gb_chat.log.server_log_config import logger
+import argparse
+import json
+import logging
+import gb_chat.log.server_log_config
+from gb_chat.errors import IncorrectDataRecivedError
+from gb_chat.common.variables import ACTION, USER, ACCOUNT_NAME, PRESENCE, \
+    TIME, DEFAULT_PORT, MAX_CONNECTIONS, RESPONSE, ERROR
+from gb_chat.common.utils import get_message, send_message
+from gb_chat.decos import log
 
 
-def create_response(message):
-    response = {
-        'response': 200,
-        'message': 'OK',
-        'data': message
+LOGGER = logging.getLogger('server')
+
+
+@log
+def process_client_message(message):
+    LOGGER.debug(f'Разбор сообщения от клиента : {message}')
+    if ACTION in message and message[ACTION] == PRESENCE and TIME in message and \
+            USER in message and message[USER][ACCOUNT_NAME] == 'Guest':
+        return {RESPONSE: 200}
+    return {
+        RESPONSE: 400,
+        ERROR: 'Bad Request'
     }
-    return response
 
 
-def send_response(sock, response):
-    json_response = json.dumps(response)
-    data = json_response.encode('utf-8')
-    sock.send(data)
-
-
-def receive_message(sock):
-    data = sock.recv(1024)
-    json_message = data.decode('utf-8')
-    message = json.loads(json_message)
-    return message
-
-
-def parse_message(message):
-    if 'action' in message and message['action'] == 'presence':
-        logger.info('Received presence message from user: %s', message['user']['account_name'])
-        return 'Presence message received'
-    else:
-        return 'Invalid message'
+@log
+def create_arg_parser():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-p', default=DEFAULT_PORT, type=int, nargs='?')
+    parser.add_argument('-a', default='', nargs='?')
+    return parser
 
 
 def main():
-    server_port = int(sys.argv[1]) if len(sys.argv) > 1 else 7777
-    server_address = sys.argv[2] if len(sys.argv) > 2 else ''
+    parser = create_arg_parser()
+    namespace = parser.parse_args(sys.argv[1:])
+    listen_address = namespace.a
+    listen_port = namespace.p
 
-    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    try:
-        sock.bind((server_address, server_port))
-        sock.listen(1)
-        logger.info('Server started')
+    if not 1023 < listen_port < 65536:
+        LOGGER.critical(f'Попытка запуска сервера с указанием неподходящего порта {listen_port}. '
+                        f'Допустимы адреса с 1024 до 65535.')
+        sys.exit(1)
+    LOGGER.info(f'Запущен сервер, порт для подключений: {listen_port}, адрес,'
+                f' с которого принимаются подключения: {listen_address}. '
+                f'Если адрес не указан, принимаются соединения с любых адресов.')
 
-        while True:
-            logger.info('Waiting for a connection...')
-            client_sock, client_address = sock.accept()
-            logger.info('Accepted connection from %s', client_address)
 
-            message = receive_message(client_sock)
-            result = parse_message(message)
+    transport = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    transport.bind((listen_address, listen_port))
 
-            response = create_response(result)
-            send_response(client_sock, response)
 
-            client_sock.close()
-            logger.info('Connection closed')
 
-    except OSError as e:
-        logger.error('Error: %s', e)
+    transport.listen(MAX_CONNECTIONS)
 
-    finally:
-        sock.close()
+    while True:
+        client, client_address = transport.accept()
+        LOGGER.info(f'Установлено соедение с ПК {client_address}')
+        try:
+            message_from_cient = get_message(client)
+            LOGGER.debug(f'Получено сообщение {message_from_cient}')
+            print(message_from_cient)
+            response = process_client_message(message_from_cient)
+            LOGGER.info(f'Cформирован ответ клиенту {response}')
+            send_message(client, response)
+            LOGGER.debug(f'Соединение с клиентом {client_address} закрывается.')
+            client.close()
+        except json.JSONDecodeError:
+            LOGGER.error(f'Не удалось декодировать Json строку, '
+                         f'полученную от клиента {client_address}. Соединение закрывается.')
+            client.close()
+        except IncorrectDataRecivedError:
+            LOGGER.error(f'От клиента {client_address} приняты некорректные данные. '
+                         f'Соединение закрывается.')
+            client.close()
 
 
 if __name__ == '__main__':
