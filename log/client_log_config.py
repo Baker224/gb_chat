@@ -20,4 +20,3 @@ if __name__ == '__main__':
     LOGGER.error('Ошибка')
     LOGGER.debug('Отладочная информация')
     LOGGER.info('Информационное сообщение')
-

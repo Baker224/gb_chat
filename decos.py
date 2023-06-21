@@ -3,6 +3,7 @@ import logging
 import gb_chat.log.server_log_config
 import gb_chat.log.client_log_config
 
+
 if sys.argv[0].find('client') == -1:
     LOGGER = logging.getLogger('server')
 else:
