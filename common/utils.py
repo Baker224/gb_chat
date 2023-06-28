@@ -1,6 +1,6 @@
-import json
-from gb_chat.common.variables import MAX_PACKAGE_LENGTH, ENCODING
+from gb_chat.common.variables import *
 from gb_chat.errors import IncorrectDataRecivedError, NonDictInputError
+import json
 from gb_chat.decos import log
 
 
