@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QMainWindow, QAction, qApp, QApplication, QLabel, QTableView, QDialog, QPushButton, \
-    QLineEdit, QFileDialog, QMessageBox
+    QLineEdit, QFileDialog , QMessageBox
 from PyQt5.QtGui import QStandardItemModel, QStandardItem
 from PyQt5.QtCore import Qt
 import os
@@ -53,7 +53,7 @@ class MainWindow(QMainWindow):
         exitAction.setShortcut('Ctrl+Q')
         exitAction.triggered.connect(qApp.quit)
         self.refresh_button = QAction('Обновить список', self)
-        self.config_btn = QAction('Настройки сервера', self)
+        self.config_btn = QAction('Настройки сервера' , self)
         self.show_history_button = QAction('История клиентов', self)
         self.statusBar()
         self.toolbar = self.addToolBar('MainBar')
@@ -113,8 +113,8 @@ class ConfigWindow(QDialog):
             dialog = QFileDialog(self)
             path = dialog.getExistingDirectory()
             path = path.replace('/', '\\')
+            self.db_path.clear()
             self.db_path.insert(path)
-
         self.db_path_select.clicked.connect(open_file_dialog)
         self.db_file_label = QLabel('Имя файла базы данных: ', self)
         self.db_file_label.move(10, 68)

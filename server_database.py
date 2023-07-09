@@ -41,10 +41,8 @@ class ServerStorage:
             self.accepted = 0
 
     def __init__(self , path):
-        print(path)
         self.database_engine = create_engine(f'sqlite:///{path}', echo=False, pool_recycle=7200,
                                              connect_args={'check_same_thread': False})
-
         self.metadata = MetaData()
 
         users_table = Table('Users', self.metadata,
@@ -83,16 +81,13 @@ class ServerStorage:
                                     )
 
         self.metadata.create_all(self.database_engine)
-
         mapper(self.AllUsers, users_table)
         mapper(self.ActiveUsers, active_users_table)
         mapper(self.LoginHistory, user_login_history)
         mapper(self.UsersContacts, contacts)
         mapper(self.UsersHistory, users_history_table)
-
         Session = sessionmaker(bind=self.database_engine)
         self.session = Session()
-
         self.session.query(self.ActiveUsers).delete()
         self.session.commit()
 
@@ -125,7 +120,6 @@ class ServerStorage:
         sender_row.sent += 1
         recipient_row = self.session.query(self.UsersHistory).filter_by(user=recipient).first()
         recipient_row.accepted += 1
-
         self.session.commit()
 
     def add_contact(self, user, contact):
@@ -133,7 +127,6 @@ class ServerStorage:
         contact = self.session.query(self.AllUsers).filter_by(name=contact).first()
         if not contact or self.session.query(self.UsersContacts).filter_by(user=user.id, contact=contact.id).count():
             return
-
         contact_row = self.UsersContacts(user.id, contact.id)
         self.session.add(contact_row)
         self.session.commit()
@@ -141,14 +134,12 @@ class ServerStorage:
     def remove_contact(self, user, contact):
         user = self.session.query(self.AllUsers).filter_by(name=user).first()
         contact = self.session.query(self.AllUsers).filter_by(name=contact).first()
-
         if not contact:
             return
-
-        print(self.session.query(self.UsersContacts).filter(
+        self.session.query(self.UsersContacts).filter(
             self.UsersContacts.user == user.id,
             self.UsersContacts.contact == contact.id
-        ).delete())
+        ).delete()
         self.session.commit()
 
     def users_list(self):
