@@ -2,7 +2,7 @@ import logging
 import sys
 
 if sys.argv[0].find('client') == -1:
-    logger = logging.getLogger('server')
+    logger = logging.getLogger('servers')
 else:
     logger = logging.getLogger('client')
 

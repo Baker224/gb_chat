@@ -8,10 +8,10 @@ SERVER_FORMATTER = logging.Formatter('%(asctime)s %(levelname)s %(filename)s %(m
 STREAM_HANDLER = logging.StreamHandler(sys.stderr)
 STREAM_HANDLER.setFormatter(SERVER_FORMATTER)
 STREAM_HANDLER.setLevel(logging.ERROR)
-LOG_FILE = logging.handlers.TimedRotatingFileHandler('log/server_log/server.log', encoding='utf8', interval=1, when='D')
+LOG_FILE = logging.handlers.TimedRotatingFileHandler('log/server_log/servers.log', encoding='utf8', interval=1, when='D')
 LOG_FILE.setFormatter(SERVER_FORMATTER)
 
-LOGGER = logging.getLogger('server')
+LOGGER = logging.getLogger('servers')
 LOGGER.addHandler(STREAM_HANDLER)
 LOGGER.addHandler(LOG_FILE)
 LOGGER.setLevel(LOGGING_LEVEL)
