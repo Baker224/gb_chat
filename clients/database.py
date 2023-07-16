@@ -20,7 +20,7 @@ class ClientDatabase:
             self.date = datetime.datetime.now()
 
     class Contacts:
-         def __init__(self, contact):
+        def __init__(self, contact):
             self.id = None
             self.name = contact
 

@@ -37,7 +37,7 @@ class ServerStorage:
             self.contact = contact
 
     class UsersHistory:
-           def __init__(self, user):
+        def __init__(self, user):
             self.id = None
             self.user = user
             self.sent = 0
@@ -261,4 +261,3 @@ if __name__ == '__main__':
     # test_db.remove_contact('test1', 'test3')
     test_db.process_message('test1', 'test2')
     print(test_db.message_history())
-

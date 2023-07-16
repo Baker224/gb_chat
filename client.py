@@ -5,7 +5,6 @@ import sys
 import os
 from Cryptodome.PublicKey import RSA
 from PyQt5.QtWidgets import QApplication, QMessageBox
-
 from gb_chat.common.variables import *
 from gb_chat.common.errors import ServerError
 from gb_chat.common.decos import log
@@ -20,6 +19,11 @@ logger = logging.getLogger('client')
 
 @log
 def arg_parser():
+    '''
+    Парсер аргументов командной строки, возвращает кортеж из 4 элементов
+    адрес сервера, порт, имя пользователя, пароль.
+    Выполняет проверку на корректность номера порта.
+    '''
     parser = argparse.ArgumentParser()
     parser.add_argument('addr', default=DEFAULT_IP_ADDRESS, nargs='?')
     parser.add_argument('port', default=DEFAULT_PORT, type=int, nargs='?')
@@ -32,7 +36,8 @@ def arg_parser():
     client_passwd = namespace.password
     if not 1023 < server_port < 65536:
         logger.critical(
-            f'Попытка запуска клиента с неподходящим номером порта: {server_port}. Допустимы адреса с 1024 до 65535. Клиент завершается.')
+            f'Попытка запуска клиента с неподходящим '
+            f'номером порта: {server_port}. Допустимы адреса с 1024 до 65535. Клиент завершается.')
         exit(1)
 
     return server_address, server_port, client_name, client_passwd
@@ -48,12 +53,14 @@ if __name__ == '__main__':
         if start_dialog.ok_pressed:
             client_name = start_dialog.client_name.text()
             client_passwd = start_dialog.client_passwd.text()
-            logger.debug(f'Using USERNAME = {client_name}, PASSWD = {client_passwd}.')
+            logger.debug(
+                f'Using USERNAME = {client_name}, PASSWD = {client_passwd}.')
         else:
             exit(0)
 
     logger.info(
-        f'Запущен клиент с парамертами: адрес сервера: {server_address} , порт: {server_port}, имя пользователя: {client_name}')
+        f'Запущен клиент с парамертами: адрес '
+        f'сервера: {server_address} , порт: {server_port}, имя пользователя: {client_name}')
 
     dir_path = os.path.dirname(os.path.realpath(__file__))
     key_file = os.path.join(dir_path, f'{client_name}.key')

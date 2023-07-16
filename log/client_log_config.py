@@ -2,7 +2,8 @@ import sys
 import logging
 from gb_chat.common.variables import LOGGING_LEVEL
 
-CLIENT_FORMATTER = logging.Formatter('%(asctime)s %(levelname)s %(filename)s %(message)s')
+CLIENT_FORMATTER = logging.Formatter(
+    '%(asctime)s %(levelname)s %(filename)s %(message)s')
 
 STREAM_HANDLER = logging.StreamHandler(sys.stderr)
 STREAM_HANDLER.setFormatter(CLIENT_FORMATTER)

@@ -24,7 +24,7 @@ def log(func_to_log):
 def login_required(func):
 
     def checker(*args, **kwargs):
-        from gb_chat.server.core import MessageProcessor
+        from gb_chat.servers.core import MessageProcessor
         from gb_chat.common.variables import ACTION, PRESENCE
         if isinstance(args[0], MessageProcessor):
             found = False
@@ -42,4 +42,3 @@ def login_required(func):
         return func(*args, **kwargs)
 
     return checker
-
